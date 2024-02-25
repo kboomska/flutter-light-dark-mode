@@ -9,12 +9,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple[500],
+      backgroundColor: Colors.blue[500],
       body: Center(
         child: MyBox(
-          color: Colors.deepPurple[300],
+          color: Colors.blue[300],
           child: MyButton(
-            color: Colors.deepPurple[200],
+            color: Colors.blue[200],
             onTap: () {},
           ),
         ),

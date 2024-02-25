@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'package:provider/provider.dart';
+
 import 'package:flutter_light_dark_mode/components/box.dart';
 import 'package:flutter_light_dark_mode/components/button.dart';
+import 'package:flutter_light_dark_mode/theme/theme_provider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,7 +18,9 @@ class HomePage extends StatelessWidget {
           color: Theme.of(context).colorScheme.primary,
           child: MyButton(
             color: Theme.of(context).colorScheme.secondary,
-            onTap: () {},
+            onTap: () {
+              Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
+            },
           ),
         ),
       ),
